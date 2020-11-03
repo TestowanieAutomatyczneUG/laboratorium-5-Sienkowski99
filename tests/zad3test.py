@@ -41,7 +41,11 @@ class ChristmasSongTest(unittest.TestCase):
     def test_negative_val(self):
         with self.assertRaisesWithMessage(ValueError):
             self.xMasSong.singOneLine(-12)
-    
+
+    def test_string_not_num(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.xMasSong.singOneLine("1")
+            
     # Utility functions
     def setUp(self):
         self.xMasSong = Song()
