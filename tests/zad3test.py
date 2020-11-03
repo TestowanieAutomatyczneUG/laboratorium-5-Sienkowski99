@@ -39,7 +39,7 @@ class ChristmasSongTest(unittest.TestCase):
     def test_multiple_1_to_1(self):
         self.assertEqual(self.xMasSong.singMultipleLines(0, 0), ['On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.'])
 
-    @unittest.skip("not implemented")
+    # @unittest.skip("not implemented")
     def test_larger_than_12(self):
         with self.assertRaisesWithMessage(ValueError):
             self.xMasSong.singOneLine(15)
