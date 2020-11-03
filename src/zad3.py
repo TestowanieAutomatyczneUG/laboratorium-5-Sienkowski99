@@ -12,4 +12,4 @@ class Song:
         return
 
     def singWholeSong(self):
-        return
+        return self.text
