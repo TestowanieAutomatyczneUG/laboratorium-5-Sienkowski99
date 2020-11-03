@@ -6,6 +6,4 @@ class Hamming:
         for i in range(0, len(a)):
             if a[i] != b[i]:
                 result += 1
-            else:
-                pass
         return result
