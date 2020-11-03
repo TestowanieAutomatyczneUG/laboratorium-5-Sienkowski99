@@ -1,6 +1,6 @@
 class Hamming:
     def distance(self, a, b):
-        if len(a) > len(b):
+        if len(a) > len(b) or len(a) < len(b):
             raise ValueError('err')
         arrA = []
         arrB = []
