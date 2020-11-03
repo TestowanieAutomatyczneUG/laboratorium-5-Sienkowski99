@@ -9,7 +9,11 @@ class Song:
         return self.text[verse]
 
     def singMultipleLines(self, verseStart, verseEnd):
-        return
+        res = []
+        for i in range(0, len(self.text)):
+            if verseStart <= i <= verseEnd:
+                res.append(self.text[i])
+        return res
 
     def singWholeSong(self):
         return self.text
