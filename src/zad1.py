@@ -4,3 +4,5 @@ class Hamming:
             return 0
         if a == b:
             return 0
+        if a != b:
+            return 1
