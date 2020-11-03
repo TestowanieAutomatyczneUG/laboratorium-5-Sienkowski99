@@ -5,7 +5,7 @@ hamming = Hamming()
 
 class HammingTest(unittest.TestCase):
 
-    @unittest.skip("not implemented")
+    # @unittest.skip("not implemented")
     def test_empty_strands(self):
         self.assertEqual(hamming.distance("", ""), 0)
 
