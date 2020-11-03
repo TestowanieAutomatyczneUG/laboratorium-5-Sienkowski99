@@ -6,7 +6,7 @@ class Song:
         self.text = lirycs.split("\n")
 
     def singOneLine(self, verse):
-        return
+        return self.text[verse]
 
     def singMultipleLines(self, verseStart, verseEnd):
         return
