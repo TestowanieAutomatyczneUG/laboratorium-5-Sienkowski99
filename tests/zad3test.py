@@ -11,7 +11,7 @@ class ChristmasSongTest(unittest.TestCase):
     def test_1_verse(self):
         self.assertEqual(self.xMasSong.singOneLine(0), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
 
-    @unittest.skip("not implemented")
+    # @unittest.skip("not implemented")
     def test_2_verse(self):
         self.assertEqual(self.xMasSong.singOneLine(1), 'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.')
 
