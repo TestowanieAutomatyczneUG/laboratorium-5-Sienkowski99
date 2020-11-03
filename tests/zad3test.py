@@ -23,7 +23,7 @@ class ChristmasSongTest(unittest.TestCase):
     def test_4_verse(self):
         self.assertEqual(self.xMasSong.singOneLine(3), 'On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')\
 
-    @unittest.skip("not implemented")
+    # @unittest.skip("not implemented")
     def test_5_verse(self):
         self.assertEqual(self.xMasSong.singOneLine(4), 'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')
 
