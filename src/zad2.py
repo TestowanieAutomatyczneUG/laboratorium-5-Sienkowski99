@@ -22,4 +22,6 @@ def roman(num):
         result += "X" * (num // 10) + symbols[num % 10]
     elif num < 50:
         result += "XL" + symbols[num % 10]
+    elif num < 90:
+        result += "L" + "X" * ((num - 50) // 10) + symbols[num % 10]
     return result
