@@ -18,7 +18,6 @@ def roman(num):
     for key in symbols:
         helper.append(key)
     helper.reverse()
-    print(helper)
     result = ""
     for symbol in helper:
         while num >= symbol:
