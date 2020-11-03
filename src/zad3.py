@@ -14,13 +14,16 @@ class Song:
             raise ValueError("err")
 
     def singMultipleLines(self, verseStart, verseEnd):
-        if verseStart > verseEnd or verseStart < 0 or verseEnd > len(self.text)-1:
+        if isinstance(verseStart, int) and isinstance(verseEnd, int):
+            if verseStart > verseEnd or verseStart < 0 or verseEnd > len(self.text)-1:
+                raise ValueError("err")
+            res = []
+            for i in range(0, len(self.text)):
+                if verseStart <= i <= verseEnd:
+                    res.append(self.text[i])
+            return res
+        else:
             raise ValueError("err")
-        res = []
-        for i in range(0, len(self.text)):
-            if verseStart <= i <= verseEnd:
-                res.append(self.text[i])
-        return res
 
     def singWholeSong(self):
         return self.text
