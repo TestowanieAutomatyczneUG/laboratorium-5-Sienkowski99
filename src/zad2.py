@@ -18,6 +18,8 @@ def roman(num):
     result = ""
     if num <= 10:
         return symbols[num]
-    if num <40:
+    elif num <40:
         result += "X" * (num // 10) + symbols[num % 10]
+    elif num < 50:
+        result += "XL" + symbols[num % 10]
     return result
