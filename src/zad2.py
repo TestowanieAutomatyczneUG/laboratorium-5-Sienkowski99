@@ -16,6 +16,8 @@ def roman(num):
         1000: "M",
     }
     result = ""
+    if num in symbols:
+        result = symbols[num]
     if num <= 10:
         return symbols[num]
     elif num <40:
@@ -24,4 +26,6 @@ def roman(num):
         result += "XL" + symbols[num % 10]
     elif num < 90:
         result += "L" + "X" * ((num - 50) // 10) + symbols[num % 10]
+    elif num < 100:
+        result += "XC" + "X" * ((num - 90) // 10) + symbols[num % 10]
     return result
