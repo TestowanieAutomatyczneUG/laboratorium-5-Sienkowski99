@@ -5,7 +5,7 @@ def roman(num):
         5: "V",
         9: "IX",
         10: "X",
-        40: "XV",
+        40: "XL",
         50: "L",
         90: "XC",
         100: "C",
@@ -17,18 +17,11 @@ def roman(num):
     helper = []
     for key in symbols:
         helper.append(key)
+    helper.reverse()
     print(helper)
     result = ""
-    if num in symbols:
-        result = symbols[num]
-    if num <= 10:
-        return symbols[num]
-    elif num <40:
-        result += "X" * (num // 10) + symbols[num % 10]
-    elif num < 50:
-        result += "XL" + symbols[num % 10]
-    elif num < 90:
-        result += "L" + "X" * ((num - 50) // 10) + symbols[num % 10]
-    elif num < 100:
-        result += "XC" + "X" * ((num - 90) // 10) + symbols[num % 10]
+    for symbol in helper:
+        while num >= symbol:
+            result += symbols[symbol]
+            num -= symbol
     return result
