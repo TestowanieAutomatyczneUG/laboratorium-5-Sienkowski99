@@ -12,6 +12,9 @@ class ChristmasSongTest(unittest.TestCase):
     def test_2_verse(self):
         self.assertEqual(self.xMasSong.singOneLine(1), 'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.')
 
+    def test_3_verse(self):
+        self.assertEqual(self.xMasSong.singOneLine(2), 'On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')
+
     # Utility functions
     def setUp(self):
         self.xMasSong = Song()
