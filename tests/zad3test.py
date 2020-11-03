@@ -38,6 +38,10 @@ class ChristmasSongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.xMasSong.singMultipleLines(15, 20)
 
+    def test_negative_val(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.xMasSong.singOneLine(-12)
+    
     # Utility functions
     def setUp(self):
         self.xMasSong = Song()
