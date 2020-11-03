@@ -34,6 +34,10 @@ class ChristmasSongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.xMasSong.singOneLine(15)
 
+    def test_range_over_12(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.xMasSong.singMultipleLines(15, 20)
+
     # Utility functions
     def setUp(self):
         self.xMasSong = Song()
