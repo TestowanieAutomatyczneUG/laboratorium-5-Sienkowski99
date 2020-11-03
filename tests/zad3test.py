@@ -59,7 +59,7 @@ class ChristmasSongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.xMasSong.singOneLine("1")
 
-    @unittest.skip("not implemented")
+    # @unittest.skip("not implemented")
     def test_range_string_not_num(self):
         with self.assertRaisesWithMessage(ValueError):
             self.xMasSong.singMultipleLines("1", 3)
