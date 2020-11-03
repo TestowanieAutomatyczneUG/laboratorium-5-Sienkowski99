@@ -45,6 +45,10 @@ class ChristmasSongTest(unittest.TestCase):
     def test_string_not_num(self):
         with self.assertRaisesWithMessage(ValueError):
             self.xMasSong.singOneLine("1")
+
+    def test_range_string_not_num(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.xMasSong.singMultipleLines("1", 3)
             
     # Utility functions
     def setUp(self):
