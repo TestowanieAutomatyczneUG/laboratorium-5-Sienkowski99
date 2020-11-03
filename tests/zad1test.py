@@ -9,7 +9,7 @@ class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
         self.assertEqual(hamming.distance("", ""), 0)
 
-    @unittest.skip("not implemented")
+    # @unittest.skip("not implemented")
     def test_single_letter_identical_strands(self):
         self.assertEqual(hamming.distance("A", "A"), 0)
 
