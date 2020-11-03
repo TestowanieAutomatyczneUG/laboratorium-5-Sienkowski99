@@ -29,7 +29,11 @@ class ChristmasSongTest(unittest.TestCase):
 
     def test_multiple_1_to_1(self):
         self.assertEqual(self.xMasSong.singMultipleLines(1, 1), ['On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.'])
-    
+
+    def test_larger_than_12(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.xMasSong.singOneLine(15)
+
     # Utility functions
     def setUp(self):
         self.xMasSong = Song()
