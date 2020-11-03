@@ -6,9 +6,12 @@ class Song:
         self.text = lirycs.split("\n")
 
     def singOneLine(self, verse):
-        if verse < 0 or verse > len(self.text)-1:
+        if isinstance(verse, int):
+            if verse < 0 or verse > len(self.text)-1:
+                raise ValueError("err")
+            return self.text[verse]
+        else:
             raise ValueError("err")
-        return self.text[verse]
 
     def singMultipleLines(self, verseStart, verseEnd):
         if verseStart > verseEnd or verseStart < 0 or verseEnd > len(self.text)-1:
