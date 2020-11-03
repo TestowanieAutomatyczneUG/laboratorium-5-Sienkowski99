@@ -1,5 +1,7 @@
 class Hamming:
     def distance(self, a, b):
+        if len(a) > len(b):
+            raise ValueError('err')
         arrA = []
         arrB = []
         for letter in a:
