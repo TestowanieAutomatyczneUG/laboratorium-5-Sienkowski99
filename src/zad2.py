@@ -1,15 +1,15 @@
 def roman(num):
-    if num == 1:
-        return  "I"
-    if num == 2:
-        return "II"
-    if num == 3:
-        return "III"
-    if num == 4:
-        return  "IV"
-    if num == 5:
-        return "V"
-    if num == 6:
-        return  "VI"
-    if num == 9:
-        return  "IX"
+    symbols = {
+        1: "I",
+        2: "II",
+        3: "III",
+        4: "IV",
+        5: "V",
+        6: "VI",
+        7: "VII",
+        8: "VIII",
+        9: "IX",
+        10: "X"
+    }
+    if num <= 10:
+        return symbols[num]
